@@ -5,8 +5,6 @@ matrix:
 
 script:
   - ./build_mac.sh
-  - export DMG_FILE=$(ls SDL2_gfx*.dmg)
-  - echo "deploying $DMG_FILE to GitHub releases"
 
 deploy:
   provider: releases
@@ -16,3 +14,4 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
+ 
