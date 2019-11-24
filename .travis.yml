@@ -5,14 +5,14 @@ matrix:
 
 script:
   - ./build_mac.sh
-  - export DMG_FILE=$(ls *.dmg)
+  - export DMG_FILE=$(ls SDL2_gfx*.dmg)
   - echo "deploying $DMG_FILE to GitHub releases"
 
 deploy:
   provider: releases
   api_key: GITHUB_OAUTH_TOKEN
   file_glob: true
-  file: ./*.dmg
+  file: ./SDL2_gfx*.dmg
   skip_cleanup: true
   on:
     tags: true
