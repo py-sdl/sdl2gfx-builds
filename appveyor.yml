@@ -1,0 +1,13 @@
+image:
+  - Visual Studio 2015
+  - macos-mojave
+
+install:
+  - cmd: vcpkg install sdl2-gfx:x86-windows
+  - cmd: vcpkg install sdl2-gfx:x64-windows
+
+build: false
+
+build_script:
+  - sh: ./build_mac.sh
+  - cmd: python build_win.py
