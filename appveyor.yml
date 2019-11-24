@@ -17,8 +17,8 @@ artifacts:
 #  - path: SDL2_gfx*.dmg
 
 deploy:
+  tag: $(APPVEYOR_REPO_TAG_NAME)
   artifact: '*.zip'
-  description: ''
   provider: GitHub
   force_update: true
   auth_token:
