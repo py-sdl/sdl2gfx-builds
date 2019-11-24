@@ -20,6 +20,7 @@ deploy:
   artifact: '*.zip'
   description: ''
   provider: GitHub
+  force_update: true
   auth_token:
     secure: yaWATFG8fFQjcXnP9D/CyVkZ5DsAs7kpS7MViOpBK7IuepzyWB2AHNo2dn5d/16b
   on:

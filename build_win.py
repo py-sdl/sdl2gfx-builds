@@ -24,6 +24,6 @@ for arch in archs:
 	readme = installpath + "{0}-windows\\share\\sdl2-gfx\\copyright".format(arch)
 	
 	with ZipFile(zipname, 'w') as z:
-		z.write(dll)
+		z.write(dll, os.path.basename(dll))
 		z.write(readme, 'README.txt')
 		
