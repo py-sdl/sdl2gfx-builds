@@ -13,12 +13,12 @@ build_script:
   - cmd: python build_win.py
 
 artifacts:
-  - path: '*.zip'
+  - path: 'SDL2_gfx*.zip'
 #  - path: SDL2_gfx*.dmg
 
 deploy:
   tag: $(APPVEYOR_REPO_TAG_NAME)
-  artifact: '*.zip'
+  artifact: /.*\.zip/
   provider: GitHub
   force_update: true
   auth_token:
