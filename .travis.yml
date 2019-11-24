@@ -1,0 +1,18 @@
+matrix:
+  include:
+    - os: osx
+      language: generic
+
+script:
+  - ./build_mac.sh
+  - export DMG_FILE=$(ls *.dmg)
+  - echo "deploying $DMG_FILE to GitHub releases"
+
+deploy:
+  provider: releases
+  api_key: GITHUB_OAUTH_TOKEN
+  file_glob: true
+  file: ./*.dmg
+  skip_cleanup: true
+  on:
+    tags: true
