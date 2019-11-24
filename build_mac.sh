@@ -19,4 +19,5 @@ mkdir diskimage
 cp README diskimage/ReadMe.txt
 cp COPYING diskimage/License.txt
 cp -R XCode/SDL2_gfx/build/Release/SDL2_gfx.framework diskimage/
+rm diskimage/SDL2_gfx.framework/Modules # remove broken symlink
 hdiutil create -volname SDL2_gfx -srcfolder diskimage -ov -format UDZO ../${PWD##*/}.dmg
