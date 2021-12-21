@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Download, mount, and copy SDL2.framework before building
-curl -o SDL2.dmg https://www.libsdl.org/release/SDL2-2.0.10.dmg
+curl -o SDL2.dmg https://www.libsdl.org/release/SDL2-2.0.18.dmg
 hdiutil attach SDL2.dmg -mountpoint /tmp/SDL2
 sudo cp -R /tmp/SDL2/SDL2.framework /Library/Frameworks/
 
