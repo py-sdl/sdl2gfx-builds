@@ -1,6 +1,6 @@
 image:
   - Visual Studio 2015
-#  - macos-mojave
+  - macos-bigsur
 
 install:
   - cmd: vcpkg install sdl2-gfx:x86-windows
@@ -9,12 +9,12 @@ install:
 build: false
 
 build_script:
-#  - sh: ./build_mac.sh
+  - sh: ./build_mac.sh
   - cmd: python build_win.py
 
 artifacts:
   - path: 'SDL2_gfx*.zip'
-#  - path: SDL2_gfx*.dmg
+  - path: SDL2_gfx*.dmg
 
 deploy:
   tag: $(APPVEYOR_REPO_TAG_NAME)
